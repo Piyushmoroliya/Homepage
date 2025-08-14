@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url("../assets/images/backgroungtwo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 10px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: clamp(24px, 5vw, 35px);
+            color: brown;
+            margin: 10px 0 20px 0;
+        }
+        
+        .calendar-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        
+        table {
+            height: 80vh;
+            min-height: 400px;
+            width: 100%;
+            min-width: 600px;
+            background-color: lightblue;
+            border-collapse: collapse;
+        }
+        
+        tr, th, td {
+            text-align: center;
+            border: 5px solid black;
+            font-size: clamp(16px, 3vw, 25px);
+            padding: 5px;
+        }
+        
+        th {
+            height: 60px;
+            font-weight: bold;
+        }
+        
+        td {
+            height: calc((80vh - 60px) / 5);
+            min-height: 60px;
+            vertical-align: middle;
+        }
+        
+        .sunday-digits {
+            color: red;
+        }
+        
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+            
+            table {
+                height: 70vh;
+                min-height: 350px;
+            }
+            
+            th {
+                height: 50px;
+                font-size: clamp(12px, 2.5vw, 18px);
+            }
+            
+            td {
+                height: calc((70vh - 50px) / 5);
+                min-height: 50px;
+                font-size: clamp(14px, 2.8vw, 20px);
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: clamp(20px, 4vw, 28px);
+                margin: 5px 0 15px 0;
+            }
+            
+            table {
+                height: 65vh;
+                min-height: 300px;
+                border: 3px solid black;
+            }
+            
+            tr, th, td {
+                border: 3px solid black;
+            }
+            
+            th {
+                height: 40px;
+                font-size: clamp(10px, 2.2vw, 16px);
+                padding: 2px;
+            }
+            
+            td {
+                height: calc((65vh - 40px) / 5);
+                min-height: 45px;
+                font-size: clamp(12px, 2.5vw, 18px);
+                padding: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>January 2025</h1>
+    <div class="calendar-container">
+        <table>
+            <tr>
+                <th class="sunday-digits">Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+            <tr>
+                <td class="sunday-digits"></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td class="sunday-digits">7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td class="sunday-digits">14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td class="sunday-digits">21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td class="sunday-digits">28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

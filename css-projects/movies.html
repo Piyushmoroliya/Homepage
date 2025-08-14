@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Rukh Khan Movies Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .movies-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .movies-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .movie-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .movie-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .movie-image {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+
+        .movie-details h3 {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 8px;
+        }
+
+        .movie-year {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .movie-description {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .movies-list {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .movies-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Shah Rukh Khan Movies</h1>
+            <p>King Khan's Iconic Film Collection</p>
+        </div>
+
+        <div class="movies-container">
+            <div class="movies-list">
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="https://assets.vogue.in/photos/5f8d7926077c3eea35ebdd20/4:3/w_887,h_665,c_limit/DDLJ.jpeg"
+                            alt="Dilwale Dulhania Le Jayenge"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='Dilwale Dulhania<br>Le Jayenge<br>(1995)';">
+                    </div>
+                    <div class="movie-details">
+                        <h3>Dilwale Dulhania Le Jayenge</h3>
+                        <p class="movie-year">1995</p>
+                        <p class="movie-description">
+                            One of the most beloved Bollywood films of all time. The story of Raj and Simran,
+                            two young Indians who fall in love during a trip across Europe. This romantic drama
+                            became a cultural phenomenon and redefined Bollywood romance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="https://asset.kompas.com/crops/leAsh9-5Gzuhev4TrpFSjn9vEf4=/0x0:1499x999/750x500/data/photo/2020/04/06/5e8ae9bea16eb.jpg"
+                            alt="My Name is Khan"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='My Name is<br>Khan<br>(2010)';">
+                    </div>
+                    <div class="movie-details">
+                        <h3>My Name is Khan</h3>
+                        <p class="movie-year">2010</p>
+                        <p class="movie-description">
+                            A touching story about Rizwan Khan, a Muslim man with Asperger's syndrome who embarks
+                            on a journey across America to meet the President and deliver a simple message:
+                            "My name is Khan and I am not a terrorist."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="https://www.tallengestore.com/cdn/shop/products/ChakDeIndia-ShahRukhKhan-BollywoodHindiMoviePoster_87fc93a2-f831-41a8-b40a-0d781ddd9f2a.jpg?v=1675251761"
+                            alt="Chak De India"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='Chak De!<br>India<br>(2007)';">
+                    </div>
+                    <div class="movie-details">
+                        <h3>Chak De! India</h3>
+                        <p class="movie-year">2007</p>
+                        <p class="movie-description">
+                            An inspiring sports drama that showcases Shah Rukh Khan as Kabir Khan, a former
+                            hockey player who coaches the Indian women's national hockey team. The film is about
+                            overcoming prejudice and achieving excellence through teamwork.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="movies-list">
+            <div class="movie-item">
+                <div class="movie-image">
+                    <img src="https://www.indiewire.com/wp-content/uploads/2023/09/JAWAN-Shah-Rukh-Khan.jpg"
+                        alt="Jawaan" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='Dilwale Dulhania<br>Le Jayenge<br>(1995)';">
+                </div>
+                <div class="movie-details">
+                    <h3>Jawaan</h3>
+                    <p class="movie-year">2023</p>
+                    <p class="movie-description">
+                        Jawan is a 2023 Indian Hindi-language action thriller film
+                        co-written and directed by Atlee (in his Hindi film debut).[5] It is produced by Gauri Khan and
+                        Gaurav Verma under Red Chillies Entertainment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-item">
+                <div class="movie-image">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZjA3YTI1ZTItZGY5Ni00MzQyLTg2NDYtMzc3NGY5NzEwYmQxXkEyXkFqcGc@._V1_.jpg"
+                        alt="pathan" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='My Name is<br>Khan<br>(2010)';">
+                </div>
+                <div class="movie-details">
+                    <h3>Pathan</h3>
+                    <p class="movie-year">2023</p>
+                    <p class="movie-description">
+                        Pathaan (pronounced [pəʈʰaːn]) is a 2023 Indian Hindi-language action thriller film directed by
+                        Siddharth Anand and produced by Aditya Chopra under Yash Raj Films. The film stars Shah Rukh
+                        Khan in the titular role, alongside Deepika Padukone, John Abraham, Dimple Kapadia, and Ashutosh
+                        Rana.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-item">
+                <div class="movie-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Om_Shanti_Om_%28soundtrack%29.jpg/250px-Om_Shanti_Om_%28soundtrack%29.jpg"
+                        alt="om shanti om" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='Chak De!<br>India<br>(2007)';">
+                </div>
+                <div class="movie-details">
+                    <h3>Om Shanti om</h3>
+                    <p class="movie-year">2007</p>
+                    <p class="movie-description">
+                        Om Shanti Om is a 2007 Hindi-language romantic
+                        fantasy film written and directed by Farah Khan, co-written by Mayur Puri and Mushtaq Shiekh,
+                        and produced by Gauri Khan under Red Chillies Entertainment. The film stars Shah Rukh Khan,
+                        Deepika Padukone (in her Hindi film debut), Shreyas Talpade, Kirron Kher, and Arjun Rampal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

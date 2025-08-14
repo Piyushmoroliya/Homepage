@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            padding: 0%;
+            background-color: 5409DA;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: black;
+        }
+
+        .main-container {
+            width: 80vw;
+            height: 80vh;
+            margin: 0%;
+            padding: 0%;
+            background-color: lightblue;
+            margin-left: 10%;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            border: 3px solid black;
+        }
+
+        .input-container {
+            width: 35vw;
+            height: 75vh;
+            background-color: #00CAFF;
+            margin-left: 5%;
+            margin-top: 2%;
+            border: 3px solid black;
+        }
+
+        .output-container {
+            width: 35vw;
+            height: 75vh;
+            background-color: #B9D4AA;
+            margin-top: 2%;
+            border: 3px solid black;
+        }
+        input{
+            text-align: center;
+            width: 70%;
+            height: 5%;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-left: 15%;
+        }
+        .output-small-container{
+            width: 15vw;
+            height: 40vh ;
+            background-color: white;
+            border: 2px solid  black;
+            border-radius: 10px;
+            margin-left: 25%;
+        }
+        button {
+            width: 50%;
+            height: 10%;
+            background-color: #129990;
+            font-size: 25px;
+            border-radius: 10px;
+            margin-left: 25%;
+            margin-bottom: 5%;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- tittle of Project -->
+    <h1>Student Data Form </h1>
+    <!-- Mani box of the project -->
+    <div class="main-container">
+        <!-- Input box of the project -->
+        <div class="input-container">
+            <h1>Input Section</h1>
+            <input type="text" id="inputOne" placeholder="Enter your Name :-">
+            <br><br>
+            <input type="text" id="inputTwo" placeholder="Enter your Roll Number :-">
+            <br><br>
+            <input type="text" id="inputThree" placeholder="Enter your Section :-">
+            <br><br>
+            <input type="text" id="inputFour" placeholder="Enter Your Percentage :-">
+            <br><br>
+            <input type="text" id="inputFive" placeholder="Enter Your Gendar :-">
+            <br><br>
+            <input type="text" id="inputSix" placeholder="Enter Your Contact no :-">
+            <br><br>
+               <input type="text" id="inputSeven" placeholder="Enter Your Address:-">
+            <br><br>
+            <button onclick="inputFunction()">Submit</button>
+        </div>
+        <div class="output-container">
+            <h1>Output Section</h1>
+            <div class="output-small-container">
+                <blockquote>
+                    <p>Student Info Preview</p>
+                    <p id="nameDisplay">Name:</p>
+                    <p id="rollnumberDisplay">Roll Number:</p>
+                    <p id="sectionDisplay">Section:</p>
+                    <p id="percentageDisplay">Percentage:</p>
+                    <p id="genderDisplay">Gender:</p>
+                    <p id="contactDisplay">Contact No:</p>
+                    <p id="addressDisplay">Address:</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <!-- javascript -->
+     <script>
+        function inputFunction(){
+            var name = document.getElementById('inputOne').value;
+            var rollNumber = document.getElementById('inputTwo').value;
+            var section = document.getElementById('inputThree').value;
+            var percentage = document.getElementById('inputFour').value;
+            var gender = document.getElementById('inputFive').value;
+            var contact = document.getElementById('inputSix').value;
+            var address = document.getElementById('inputSeven').value;
+
+            document.getElementById('nameDisplay').innerHTML = "Name :- " + name;
+            document.getElementById('rollnumberDisplay').innerHTML = "Roll Number :-" + rollNumber;
+            document.getElementById('sectionDisplay').innerHTML = "Section :- " + section;
+            document.getElementById('percentageDisplay').innerHTML = "percentage :- " + percentage;
+            document.getElementById('genderDisplay').innerHTML = "Gender :-" + gender;
+            document.getElementById('contactDisplay').innerHTML = "Contact no :- " + contact;
+            document.getElementById('addressDisplay').innerHTML = "address :- " + address;
+
+         alert("Name: " + name + "\nRollnumber: " + rollNumber + "\nsection: " + section + "\npercentage: " + percentage + "\ngender :" 
+            + gender + "\ncontact: " + contact + "\naddress" + address);
+        
+        }
+     </script>
+</body>
+
+</html>

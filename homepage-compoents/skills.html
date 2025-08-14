@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #1F242D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.skills-box {
+  width: 90vw;
+  min-height: 80vh;
+  background-color: #1F242D;
+  border-radius: 10px;
+  padding: 40px 20px;
+}
+
+.tittle-box {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tittle-text {
+  text-align: center;
+  color: white;
+  font-family: cursive;
+  font-size: 45px;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.skill-category {
+  background-color: #2a3040;
+  border-radius: 15px;
+  padding: 30px;
+  border: 2px solid #4AD9E4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(74, 217, 228, 0.3);
+}
+
+.category-title {
+  color: #4AD9E4;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.skill-item {
+  background: linear-gradient(135deg, #2CAAB6, #4AD9E4);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 120px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4AD9E4, #2CAAB6);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.skill-item:hover::before {
+  left: 0;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(44, 170, 182, 0.4);
+}
+
+.skill-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Responsive Design for Skills Section */
+@media (max-width: 1024px) {
+  .tittle-text {
+    font-size: 35px;
+  }
+  
+  .category-title {
+    font-size: 24px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+  }
+  
+  .skill-item {
+    min-width: 100px;
+    min-height: 70px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 20px 10px;
+  }
+  
+  .skills-box {
+    width: 95vw;
+    padding: 30px 15px;
+  }
+  
+  .tittle-text {
+    font-size: 30px;
+  }
+  
+  .category-title {
+    font-size: 22px;
+  }
+  
+  .skills-content {
+    gap: 30px;
+  }
+  
+  .skill-category {
+    padding: 20px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 12px;
+  }
+  
+  .skill-item {
+    min-width: 90px;
+    min-height: 60px;
+    font-size: 13px;
+    padding: 15px;
+  }
+  
+  .skill-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tittle-text {
+    font-size: 25px;
+  }
+  
+  .category-title {
+    font-size: 20px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .skill-item {
+    min-width: 80px;
+    min-height: 55px;
+    font-size: 12px;
+    padding: 12px;
+  }
+  
+  .skill-icon {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
+    </style>
+</head>
+<body>
+     <!-- Skills section start -->
+     <section class="section-container" id="skills">
+        <div class="skills-box">
+            <!-- Title box start -->
+            <div class="tittle-box">
+                <h1 class="tittle-text">My Programming<span style="color: #2CAAB6;">Skills</span></h1>
+            </div>
+            <!-- Title box end -->
+
+            <!-- Skills Content -->
+            <div class="skills-content">
+                <!-- Frontend Skills -->
+                <div class="skill-category">
+                    <h2 class="category-title">🎨 Frontend Development</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>React js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Backend Skills -->
+                <div class="skill-category">
+                    <h2 class="category-title">⚙️ Backend Development</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span>C</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-object-group"></i>
+                            </div>
+                            <span>OOPS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-node-js"></i>
+                            </div>
+                            <span>Node js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>DBMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills section end -->
+
+</body>
+</html>

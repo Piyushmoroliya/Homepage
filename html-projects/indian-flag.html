@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("../assets/images/backgroungtwo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .flag-container {
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 3/2;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .flag-stripe {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .orange-stripe {
+            background-color: #FF9933;
+        }
+
+        .white-stripe {
+            background-color: white;
+        }
+
+        .green-stripe {
+            background-color: #138808;
+        }
+
+        .chakra {
+            width: clamp(80px, 15vw, 120px);
+            height: clamp(80px, 15vw, 120px);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .main-container {
+                gap: 15px;
+            }
+            
+            .title {
+                margin-bottom: 15px;
+            }
+            
+            .flag-container {
+                border-radius: 6px;
+                border-width: 1px;
+            }
+        }
+
+        /* Small mobile devices */
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
+            .main-container {
+                gap: 10px;
+            }
+            
+            .title {
+                margin-bottom: 10px;
+            }
+            
+            .flag-container {
+                border-radius: 4px;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .main-container {
+                max-width: 1000px;
+            }
+            
+            .flag-container {
+                max-width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="title">I Love My India</h1>
+        <div class="flag-container">
+            <div class="flag-stripe orange-stripe"></div>
+            <div class="flag-stripe white-stripe">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg" 
+                     alt="Ashoka Chakra" 
+                     class="chakra">
+            </div>
+            <div class="flag-stripe green-stripe"></div>
+        </div>
+    </div>
+</body>
+</html>
